@@ -60,7 +60,6 @@
   $.get("https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=88c7e2a7ea768a229bfa8cb3207a105f", function(Response) {
     var temp = parseInt(Response.main.temp - 273.15)
     $('#api_temp').html(temp + '&#176 C');
-    
     var icon = Response.weather[0].icon;
     $('#weather-icon').html("<img src=http://openweathermap.org/img/wn/"+icon+"@2x.png width=8%>");
   });
@@ -80,9 +79,8 @@
   <div>
     <h4>Outside temp: <a id="api_temp">unknown</a><h4>
   </div>
-  <div>
-    <div id="weather-icon"></div>
-  </div>
+  <div id="weather-icon"></div>
+  <button id="save-state">save</button>
   <script src='src/Thermostat.js'></script>
 </body>
 </html>

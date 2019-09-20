@@ -1,11 +1,11 @@
 'use strict';
 
-function Thermostat() {
+function Thermostat(temp = 20, maxTemp = 25, powerSaving = 'green') {
 
-  this._temperature = 20;
+  this._temperature = temp;
   this._minTemp = 10;
   this._maxTemp = 25;
-  this._powerSavingOn = 'green';
+  this._powerSavingOn = powerSaving;
 }
 
 Thermostat.prototype.current_temp = function() {
